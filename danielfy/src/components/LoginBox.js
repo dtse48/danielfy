@@ -5,10 +5,10 @@ function LoginBox() {
     const [ username,setUsername ] = useState("");
     const [ password,setPassword ] = useState("");
     return (
-        <div>
+        <div style={{margin:"auto", marginTop:"200px",width:"15%"}}>
             {console.log(username)}
             {console.log(password)}
-            <Card style={{margin:"auto", marginTop:"200px",width:"15%"}}>
+            <Card>
                 <Card.Content>
                     <Card.Header style={{textAlign:"center"}}>Log into Spotify</Card.Header>
                     <Form>
