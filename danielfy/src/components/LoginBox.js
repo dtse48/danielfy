@@ -1,27 +1,15 @@
-import { useState } from "react";
-import { Card,Form,Button } from "semantic-ui-react";
+import { Card,Form } from "semantic-ui-react";
+const URL = "https://accounts.spotify.com/authorize?client_id=fd8ac44ebaa54919ba58482ec3071a53&response_type=code&redirect_uri=http://localhost:3000/loggedin&show_dialog=true";
 
 function LoginBox() {
-    const [ username,setUsername ] = useState("");
-    const [ password,setPassword ] = useState("");
     return (
         <div style={{margin:"auto", marginTop:"200px",width:"15%"}}>
-            {console.log(username)}
-            {console.log(password)}
             <Card>
                 <Card.Content>
                     <Card.Header style={{textAlign:"center"}}>Log into Spotify</Card.Header>
                     <Form>
-                        <Form.Field>
-                            <label>Username:</label>
-                            <input onChange={e=>{setUsername(e.target.value)}}></input>
-                        </Form.Field>
-                        <Form.Field>
-                            <label>Password:</label>
-                            <input type="password" onChange={e=>{setPassword(e.target.value)}}></input>
-                        </Form.Field>
                         <div style={{textAlign:"center"}}>
-                            <Button>Log in</Button>
+                            <a href={URL}>Log In</a>
                         </div>
                     </Form>
                 </Card.Content>
