@@ -1,8 +1,7 @@
 import axios from "axios";
-import { useEffect,useContext,useState } from "react";
+import { useEffect,useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Card,Button } from "semantic-ui-react";
-import { Context } from "../context/Context";
 import Results from "./Results";
 
 const queryString = window.location.search;

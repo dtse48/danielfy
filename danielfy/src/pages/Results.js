@@ -1,5 +1,4 @@
-import { useContext,useEffect,useState } from "react";
-import { Context } from "../context/Context";
+import { useEffect,useState } from "react";
 import axios from "axios";
 import ResultList from "../components/ResultList";
 
