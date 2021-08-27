@@ -40,7 +40,6 @@ function LoggedIn() {
         setShowResults(true);
     }
     return (
-        
         <div>
             <link
             rel="stylesheet"
