@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect,useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Card,Button } from "semantic-ui-react";
+import { Card,Button,Icon } from "semantic-ui-react";
 import Results from "./Results";
 
 const queryString = window.location.search;
@@ -41,6 +41,7 @@ function LoggedIn() {
     }
     return (
         <div>
+            <Icon name="home" onClick={()=>{setShowResults(false)}} link/>
             <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
