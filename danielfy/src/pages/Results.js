@@ -27,16 +27,16 @@ function Results(props) {
             <div style={{marginTop:"25px",textAlign:"center"}}> 
                 <h3>Your Top {numResults} {(props.resultsType)[0].toUpperCase()+(props.resultsType).slice(1)}</h3>
                 <div>
-                    <select style={{marginRight:"10px"}}>
-                        <option onClick={(e)=>{setNumResults(e.target.value)}} value={5}>5</option>
-                        <option onClick={(e)=>{setNumResults(e.target.value)}} value={10}>10</option>
-                        <option selected onClick={(e)=>{setNumResults(e.target.value)}} value={25}>25</option>
-                        <option onClick={(e)=>{setNumResults(e.target.value)}} value={50}>50</option>
+                    <select onChange={(event)=>{setNumResults(event.target.value)}} style={{marginRight:"10px"}}>
+                        <option value={5}>5</option>
+                        <option value={10}>10</option>
+                        <option selected value={25}>25</option>
+                        <option value={50}>50</option>
                     </select>
-                    <select>
-                        <option onClick={(e)=>{setTimeRange(e.target.value)}} value="short_term">Past Month</option>
-                        <option selected onClick={(e)=>{setTimeRange(e.target.value)}} value="medium_term">Past 6 Months</option>
-                        <option onClick={(e)=>{setTimeRange(e.target.value)}} value="long_term">All Time</option>
+                    <select onChange={(event)=>{setTimeRange(event.target.value)}}>
+                        <option value="short_term">Past Month</option>
+                        <option value="medium_term">Past 6 Months</option>
+                        <option value="long_term">All Time</option>
                     </select>
                 </div>
                 <ResultList resultsType={props.resultsType} results={topResults}></ResultList>
